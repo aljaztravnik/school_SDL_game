@@ -1,0 +1,6 @@
+﻿  handlingGameStuff.cpp
+  karakterji.cpp
+  neKrznu_sdl.cpp
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\nekrznu_sdl.cpp(11): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  neKrznu_sdl.vcxproj -> C:\Users\travn\Desktop\neKrznu_sdl\Debug\neKrznu_sdl.exe

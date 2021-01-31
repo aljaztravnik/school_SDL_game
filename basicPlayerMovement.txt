@@ -1,0 +1,87 @@
+#include <iostream>
+#include <string>
+#include <SDL.h>
+
+SDL_Texture* LoadImage(std::string file, SDL_Renderer* renderer)
+{
+	SDL_Surface *loadedImage = nullptr;
+	SDL_Texture *texture = nullptr;
+	loadedImage = SDL_LoadBMP(file.c_str());
+
+	if (loadedImage != nullptr)
+	{
+		texture = SDL_CreateTextureFromSurface(renderer, loadedImage);
+		SDL_FreeSurface(loadedImage);
+	}
+	else
+		std::cout << SDL_GetError() << std::endl;
+	return texture;
+}
+
+int main(int argc, char* argv[])
+{
+	SDL_Window* window = nullptr;
+	SDL_Renderer* renderer = nullptr;
+	
+
+	if (SDL_Init(SDL_INIT_VIDEO) < 0)
+	{
+		std::cout << "SDL is shit\n" << "SDL ERROR: " << SDL_GetError() << '\n';
+	}
+	else
+	{
+		window = SDL_CreateWindow("Ne krznu", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, SDL_WINDOW_SHOWN);
+		if (window == NULL)
+			std::cout << "Window creation error: " << SDL_GetError() << '\n';
+		renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+
+		SDL_Rect playerRect;
+		playerRect.x = 100;
+		playerRect.y = 100;
+		playerRect.w = 150;
+		playerRect.h = 200;
+		SDL_Texture* playerTexture = LoadImage("player.bmp", renderer);
+
+		bool running = true;
+		SDL_Event event;
+
+		while (running)
+		{
+			while (SDL_PollEvent(&event))
+			{
+				if (event.type == SDL_QUIT)
+				{
+					running = false;
+				}
+				else if (event.type == SDL_KEYDOWN)
+				{
+					switch (event.key.keysym.sym)
+					{
+						case SDLK_a:
+							playerRect.x -= 5;
+							break;
+						case SDLK_d:
+							playerRect.x += 5;
+							break;
+						case SDLK_w:
+							playerRect.y -= 5;
+							break;
+						case SDLK_s:
+							playerRect.y += 5;
+					}
+				}
+			}
+			SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+			SDL_RenderClear(renderer);
+
+			SDL_RenderCopy(renderer, playerTexture, nullptr, &playerRect);
+
+			SDL_RenderPresent(renderer);
+		}
+		SDL_DestroyTexture(playerTexture);
+		SDL_DestroyRenderer(renderer);
+		SDL_DestroyWindow(window);
+		SDL_Quit();
+	}
+	return 0;
+}

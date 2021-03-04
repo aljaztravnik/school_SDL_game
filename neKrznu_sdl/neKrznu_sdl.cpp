@@ -2,38 +2,39 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
-#include <SDL.h>
-#include "handlingGameStuff.h"
 #include "karakterji.h"
 
 int main(int argc, char* argv[])
 {
-	srand(time(NULL));
+	srand(static_cast<unsigned int>(time(NULL)));
 
-	GameStuff game;
-	Player player;
-	Activist activist;
-
-	player.setPlayerTexture(game.LoadImage("player.bmp"));
-	activist.setActivistTexture(game.LoadImage("activist.bmp"));
+	Game game;
+	int fps = 60;
+	Uint32 frameStart;
+	int frameTime;
+	int frameDelay = 1000 / fps;
 	
-	bool running = true;
-	while (running)
+	while (game.handleEvents())
 	{
-		while (SDL_PollEvent(&game.getEvent()))
-		{
-			if (game.getEvent().type == SDL_QUIT) running = false;
-			else player.movement(game.getEvent());
-		}
+		frameStart = SDL_GetTicks();
+
+		/////// MOVEMENT AKTIVISTOV IN ENEMYEV
+		game.activistMovement();
+		game.enemyMovement();
+
+		/////// DISPLAY STUFF
 		game.clearScreen();
-		game.displayPlayer(player.getPlayerTexture(), &(player.getPlayerRect()));
-		game.displayActivist(activist.getActivistTexture(), &(activist.getActivistRect()));
+		game.displayActivists_Enemies();
+		game.displayFarms();
+		game.displayPlayer();
 		game.displayScreen();
+
+		game.collision();
+
+		frameTime = SDL_GetTicks() - frameStart;
+		if (frameDelay > frameTime) SDL_Delay(frameDelay - frameTime);
 	}
-
-	player.destroySDL();
-	activist.destroySDL();
-	game.destroySDL();
-
+	game.destroyCharactersSDL();
+	game.destroyGameSDL();
 	return 0;
 }

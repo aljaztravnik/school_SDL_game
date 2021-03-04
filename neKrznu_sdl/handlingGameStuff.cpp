@@ -7,11 +7,12 @@
 GameStuff::GameStuff()
 {
 	running = true;
-	if (SDL_Init(SDL_INIT_VIDEO) < 0) std::cout << "SDL is shit\n" << "SDL ERROR: " << SDL_GetError() << '\n';
+	if (SDL_Init(SDL_INIT_VIDEO) < 0) std::cout << "Failed to initialize SDL.\n" << "SDL ERROR: " << SDL_GetError() << '\n';
 	window = SDL_CreateWindow("Ne krznu", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, SDL_WINDOW_SHOWN);
-	if (window == NULL)
-		std::cout << "Window creation error: " << SDL_GetError() << '\n';
+	if (window == NULL) std::cout << "Window creation error: " << SDL_GetError() << '\n';
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+
+	if (TTF_Init() == -1) std::cout << "Failed to initialize SDL_ttf.\n";
 }
 
 SDL_Texture* GameStuff::LoadImage(std::string file)
@@ -30,30 +31,10 @@ SDL_Texture* GameStuff::LoadImage(std::string file)
 	return texture;
 }
 
-SDL_Renderer* GameStuff::getRenderer()
-{
-	return renderer;
-}
-
-SDL_Event GameStuff::getEvent()
-{
-	return event;
-}
-
 void GameStuff::clearScreen()
 {
 	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
 	SDL_RenderClear(renderer);
-}
-
-void GameStuff::displayPlayer(SDL_Texture* playerTexture, SDL_Rect* playerRect)
-{
-	SDL_RenderCopy(renderer, playerTexture, nullptr, playerRect);
-}
-
-void GameStuff::displayActivist(SDL_Texture* activistTexture, SDL_Rect* activistRect)
-{
-	SDL_RenderCopy(renderer, activistTexture, nullptr, activistRect);
 }
 
 void GameStuff::displayScreen()
@@ -61,7 +42,7 @@ void GameStuff::displayScreen()
 	SDL_RenderPresent(renderer);
 }
 
-void GameStuff::destroySDL()
+void GameStuff::destroyGameSDL()
 {
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);

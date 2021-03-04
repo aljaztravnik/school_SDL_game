@@ -1,6 +1,20 @@
-﻿  handlingGameStuff.cpp
-  karakterji.cpp
-  neKrznu_sdl.cpp
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\nekrznu_sdl.cpp(11): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
+﻿  karakterji.cpp
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(80): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(126): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(210): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(214): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(222): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(227): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(228): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(230): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(233): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(234): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(236): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(237): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(245): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(253): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(260): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(280): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(282): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(291): warning C4018: '<': signed/unsigned mismatch
   neKrznu_sdl.vcxproj -> C:\Users\travn\Desktop\neKrznu_sdl\Debug\neKrznu_sdl.exe

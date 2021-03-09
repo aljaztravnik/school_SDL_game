@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -163,13 +163,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="activist.cpp" />
+    <ClCompile Include="commonFunctions.cpp" />
+    <ClCompile Include="enemy.cpp" />
+    <ClCompile Include="farm.cpp" />
     <ClCompile Include="handlingGameStuff.cpp" />
-    <ClCompile Include="karakterji.cpp" />
+    <ClCompile Include="game.cpp" />
     <ClCompile Include="neKrznu_sdl.cpp" />
+    <ClCompile Include="player.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="activist.h" />
+    <ClInclude Include="commonFunctions.h" />
+    <ClInclude Include="enemy.h" />
+    <ClInclude Include="farm.h" />
     <ClInclude Include="handlingGameStuff.h" />
-    <ClInclude Include="karakterji.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -12,8 +12,8 @@ protected:
 	bool running;
 public:
 	GameStuff();
+	~GameStuff();
 	SDL_Texture* LoadImage(std::string);
 	void clearScreen();
 	void displayScreen();
-	void destroyGameSDL();
 };

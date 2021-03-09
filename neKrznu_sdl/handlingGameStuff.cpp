@@ -1,6 +1,4 @@
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
 #include <SDL.h>
 #include "handlingGameStuff.h"
 
@@ -11,8 +9,6 @@ GameStuff::GameStuff()
 	window = SDL_CreateWindow("Ne krznu", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, SDL_WINDOW_SHOWN);
 	if (window == NULL) std::cout << "Window creation error: " << SDL_GetError() << '\n';
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-
-	if (TTF_Init() == -1) std::cout << "Failed to initialize SDL_ttf.\n";
 }
 
 SDL_Texture* GameStuff::LoadImage(std::string file)
@@ -42,7 +38,7 @@ void GameStuff::displayScreen()
 	SDL_RenderPresent(renderer);
 }
 
-void GameStuff::destroyGameSDL()
+GameStuff::~GameStuff()
 {
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);

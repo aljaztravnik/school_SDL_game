@@ -1,20 +1,23 @@
-﻿  karakterji.cpp
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(80): warning C4018: '<': signed/unsigned mismatch
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(126): warning C4018: '<': signed/unsigned mismatch
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(210): warning C4018: '<': signed/unsigned mismatch
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(214): warning C4018: '<': signed/unsigned mismatch
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(222): warning C4018: '<': signed/unsigned mismatch
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(227): warning C4018: '<': signed/unsigned mismatch
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(228): warning C4018: '<': signed/unsigned mismatch
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(230): warning C4018: '<': signed/unsigned mismatch
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(233): warning C4018: '<': signed/unsigned mismatch
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(234): warning C4018: '<': signed/unsigned mismatch
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(236): warning C4018: '<': signed/unsigned mismatch
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(237): warning C4018: '<': signed/unsigned mismatch
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(245): warning C4018: '<': signed/unsigned mismatch
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(253): warning C4018: '<': signed/unsigned mismatch
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(260): warning C4018: '<': signed/unsigned mismatch
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(280): warning C4018: '<': signed/unsigned mismatch
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(282): warning C4018: '<': signed/unsigned mismatch
-c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\karakterji.cpp(291): warning C4018: '<': signed/unsigned mismatch
+﻿  game.cpp
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(99): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(112): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(147): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(194): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(268): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(280): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(288): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(293): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(294): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(296): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(299): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(302): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(310): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(313): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(329): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(345): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(354): warning C4018: '<': signed/unsigned mismatch
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(361): warning C4018: '<': signed/unsigned mismatch
+  player.cpp
+  Generating Code...
+c:\users\travn\desktop\nekrznu_sdl\nekrznu_sdl\game.cpp(260): warning C4715: 'Game::canMove': not all control paths return a value
   neKrznu_sdl.vcxproj -> C:\Users\travn\Desktop\neKrznu_sdl\Debug\neKrznu_sdl.exe
